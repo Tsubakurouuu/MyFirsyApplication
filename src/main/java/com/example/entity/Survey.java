@@ -9,10 +9,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Inquiry {
+public class Survey {
 	private int id;
-	private String name;
-	private String email;
-	private String contents;
+	private int age;
+	private int satisfaction;
+	private String comment;
 	private LocalDateTime created;
 }
