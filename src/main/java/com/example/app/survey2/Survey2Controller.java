@@ -34,7 +34,7 @@ public class Survey2Controller {
 		model.addAttribute("survey2List", list);
 		model.addAttribute("title", "Survey2 Index");
 		
-		return "survey2/form";
+		return "survey2/index";
 	}
 	
 	@GetMapping("/form")
