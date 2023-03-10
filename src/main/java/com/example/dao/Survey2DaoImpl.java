@@ -7,9 +7,11 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import com.example.entity.Survey2;
 
+@Repository
 public class Survey2DaoImpl implements Survey2Dao {
 	
 	private final JdbcTemplate jdbcTemplate;
@@ -26,7 +28,7 @@ public class Survey2DaoImpl implements Survey2Dao {
 	}
 
 	@Override
-	public int updateSurvey(Survey2 survey2) {
+	public List<Survey2> getAll() {
 		String sql = "SELECT id, age, satisfaction, comment, created FROM survey2";
 		List<Map<String, Object>> resultList = jdbcTemplate.queryForList(sql);
 		List<Survey2> list = new ArrayList<Survey2>();
